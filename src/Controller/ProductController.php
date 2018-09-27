@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\BalisongRepository;
+use App\Repository\old;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -13,7 +13,7 @@ class ProductController extends AbstractController
      */
     public function product($productId = 0)
     {
-        $balisongRepository = new BalisongRepository();
+        $balisongRepository = new old();
         $balisong = $balisongRepository->findOneById($productId);
 
         return $this->render('product/detail.html.twig', [

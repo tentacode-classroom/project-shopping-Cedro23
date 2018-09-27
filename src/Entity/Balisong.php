@@ -1,163 +1,227 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Cedric
- * Date: 26/09/2018
- * Time: 12:14
- */
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\BalisongRepository")
+ */
 class Balisong
 {
-    //<editor-fold desc="Variables">
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
     private $id;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private $description;
+
+    /**
+     * @ORM\Column(type="float")
+     */
     private $price;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
     private $colour;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $bladeLength;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $bladeMaterial;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
     private $bladeType;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
     private $lockingType;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $handle;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
     private $brand;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
     private $model;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $ref;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $imageUrl;
-    //</editor-fold>
 
-    //<editor-fold desc="Setters">
-    public function setId(int $id)
-    {
-        $this->id = $id;
-    }
-
-    public function setDescription(string $description)
-    {
-        $this->description = $description;
-    }
-
-    public function setPrice(float $price)
-    {
-        $this->price = $price;
-    }
-
-    public function setColour(string $colour)
-    {
-        $this->colour = $colour;
-    }
-
-    public function setBladeLength(int $bladeLength)
-    {
-        $this->bladeLength = $bladeLength;
-    }
-
-    public function setBladeMaterial(string $bladeMaterial)
-    {
-        $this->bladeMaterial = $bladeMaterial;
-    }
-
-    public function setBladeType(string $bladeType)
-    {
-        $this->bladeType = $bladeType;
-    }
-
-    public function setLockingType(string $lockingType)
-    {
-        $this->lockingType = $lockingType;
-    }
-
-    public function setHandle(string $handle)
-    {
-        $this->handle = $handle;
-    }
-
-    public function setBrand(string $brand)
-    {
-        $this->brand = $brand;
-    }
-
-    public function setModel(string $model)
-    {
-        $this->model = $model;
-    }
-
-    public function setRef(int $ref)
-    {
-        $this->ref = $ref;
-    }
-
-    public function setImageUrl($imageUrl)
-    {
-        $this->imageUrl = $imageUrl;
-    }
-    //</editor-fold>
-
-    //<editor-fold desc="Getters">
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getDescription()
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function getPrice()
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getPrice(): ?float
     {
         return $this->price;
     }
 
-    public function getColour()
+    public function setPrice(float $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getColour(): ?string
     {
         return $this->colour;
     }
 
-    public function getBladeLength()
+    public function setColour(string $colour): self
+    {
+        $this->colour = $colour;
+
+        return $this;
+    }
+
+    public function getBladeLength(): ?int
     {
         return $this->bladeLength;
     }
 
-    public function getBladeMaterial()
+    public function setBladeLength(int $bladeLength): self
+    {
+        $this->bladeLength = $bladeLength;
+
+        return $this;
+    }
+
+    public function getBladeMaterial(): ?int
     {
         return $this->bladeMaterial;
     }
 
-    public function getBladeType()
+    public function setBladeMaterial(int $bladeMaterial): self
+    {
+        $this->bladeMaterial = $bladeMaterial;
+
+        return $this;
+    }
+
+    public function getBladeType(): ?string
     {
         return $this->bladeType;
     }
 
-    public function getLockingType()
+    public function setBladeType(string $bladeType): self
+    {
+        $this->bladeType = $bladeType;
+
+        return $this;
+    }
+
+    public function getLockingType(): ?string
     {
         return $this->lockingType;
     }
 
-    public function getHandle()
+    public function setLockingType(string $lockingType): self
+    {
+        $this->lockingType = $lockingType;
+
+        return $this;
+    }
+
+    public function getHandle(): ?int
     {
         return $this->handle;
     }
 
-    public function getBrand()
+    public function setHandle(int $handle): self
+    {
+        $this->handle = $handle;
+
+        return $this;
+    }
+
+    public function getBrand(): ?string
     {
         return $this->brand;
     }
 
-    public function getModel()
+    public function setBrand(string $brand): self
+    {
+        $this->brand = $brand;
+
+        return $this;
+    }
+
+    public function getModel(): ?string
     {
         return $this->model;
     }
 
-    public function getRef()
+    public function setModel(string $model): self
+    {
+        $this->model = $model;
+
+        return $this;
+    }
+
+    public function getRef(): ?int
     {
         return $this->ref;
     }
 
-    public function getImageUrl()
+    public function setRef(int $ref): self
+    {
+        $this->ref = $ref;
+
+        return $this;
+    }
+
+    public function getImageUrl(): ?string
     {
         return $this->imageUrl;
     }
-    //</editor-fold>
+
+    public function setImageUrl(string $imageUrl): self
+    {
+        $this->imageUrl = $imageUrl;
+
+        return $this;
+    }
 }

@@ -6,50 +6,50 @@
     <body>
         <main role="main">
 
-            <!-- Main jumbotron for a primary marketing message or call to action -->
-            <div class="jumbotron">
+            <section class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="display-3">Hello, world!</h1>
+                    <h1 class="jumbotron-heading">Vente de balisong</h1>
+                    <p class="lead text-muted">Bienvenue sur ce site de vente de balisong (couteaux papillons).</p>
                     <p>
-                        Bienvenue sur la page d'accueil de ce site de vente de balisong, aussi appelés couteaux papillon. <br>
-                        Vous pouvez parcourir les différents onglets dans la bar de navigation (mais pas pour le moment). <br>
+                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
                     </p>
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+
+                    <div class="row">
+
+                        {% for product in products %}
+                            <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm">
+                                    <a href="{{ url('product', {'productId': product.id }) }}"><img class="card-img-top" src="{{ asset('img/') }}{{ product.imageUrl }}" alt="Card image cap" href="{{ url('product', {'productId': product.id }) }}"></a>
+                                    <div class="card-body">
+                                        <a href="{{ url('product', {'productId': product.id }) }}"><h3 class="card-text">{{ product.brand}} - {{ product.model }}</h3></a>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <a role="button" class="btn btn-sm btn-outline-secondary" href="{{ url('product', {'productId': product.id }) }}">View</a>
+                                            </div>
+                                            <h5 class="text-muted">{{ product.price|number_format(2, '.', ',') }} €</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
 
-            <div class="container">
-                <!-- Example row of columns -->
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-md-4" style="margin-bottom: 0px;">
-                            <h1>{{ product.brand}} - {{ product.model }}</h1>
-                            <p> <img style="width: 350px; height: 350px;" src="{{ asset('img/') }}{{ product.imageUrl }}"></p>
-                            <div>
-                                <a style="margin-left: 20px; font-size: 35px;">{{ product.price }} €</a>
-                                <a class="btn btn-secondary" style="margin-left: 90px;margin-bottom: 20px;" href="{{ url('product', {'productId': product.id }) }}" role="button">View details &raquo;</a>
-                            </div>
-                            <hr>
-                        </div>
-                    {% endfor %}
-                </div>
-
-                <hr>
-
-            </div> <!-- /container -->
-
         </main>
+
 
         <footer class="container">
             <p>&copy; Company 2017-2018</p>
         </footer>
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-        <script src="../../assets/js/vendor/popper.min.js"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
+
     </body>
 
 {% endblock %}

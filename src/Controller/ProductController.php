@@ -2,19 +2,26 @@
 
 namespace App\Controller;
 
-use App\Repository\old;
+use App\Entity\Balisong;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/product/{productId}", name="product")
+     * @Route("/product/{id}", name="product")
      */
-    public function product($productId = 0)
+    public function product($id = 0)
     {
-        $balisongRepository = new old();
-        $balisong = $balisongRepository->findOneById($productId);
+        $balisong = $this->getDoctrine()
+            ->getRepository(Balisong::class)
+            ->find($id);
+
+        $balisong->incrementViewCounter();
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($balisong);
+        $entityManager->flush();
 
         return $this->render('product/detail.html.twig', [
             'controller_name' => 'ProductController',

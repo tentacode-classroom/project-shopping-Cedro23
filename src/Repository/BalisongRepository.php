@@ -19,22 +19,46 @@ class BalisongRepository extends ServiceEntityRepository
         parent::__construct($registry, Balisong::class);
     }
 
-//    /**
-//     * @return Balisong[] Returns an array of Balisong objects
-//     */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Balisong[] Returns an array of Balisong objects
+     */
+    public function findByBrand(string $value)
     {
         return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
+            ->andWhere('b.brand = :val')
             ->setParameter('val', $value)
             ->orderBy('b.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
+    public function findByModel(string $value)
+    {
+        return $this->createQueryBuilder('b')
+            ->andWhere('b.model = :val')
+            ->setParameter('val', $value)
+            ->orderBy('b.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function searchByValue(string $value)
+    {
+        $value = "%".$value."%";
+
+        return $this->createQueryBuilder('b')
+            ->andWhere('b.brand LIKE :val')
+            ->setParameter('val', $value)
+            ->orWhere('b.model LIKE :val')
+            ->setParameter('val', $value)
+            ->orderBy('b.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 
     /*
     public function findOneBySomeField($value): ?Balisong

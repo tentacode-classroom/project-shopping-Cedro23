@@ -6,6 +6,8 @@
     <body>
         <main role="main">
 
+
+
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1 class="jumbotron-heading">Vente de balisong</h1>
@@ -25,12 +27,12 @@
                         {% for product in products %}
                             <div class="col-md-4">
                                 <div class="card mb-4 shadow-sm">
-                                    <a href="{{ url('product', {'productId': product.id }) }}"><img class="card-img-top" src="{{ asset('img/') }}{{ product.imageUrl }}" alt="Card image cap" href="{{ url('product', {'productId': product.id }) }}"></a>
+                                    <a href="{{ path('product', {'id': product.id }) }}"><img class="card-img-top" src="{{ asset('img/') }}{{ product.imageUrl }}" alt="Card image cap" href="{{ url('product', {'productId': product.id }) }}"></a>
                                     <div class="card-body">
-                                        <a href="{{ url('product', {'productId': product.id }) }}" class="underlined-text"><h3 class="card-text">{{ product.brand}} - {{ product.model }}</h3></a>
+                                        <a href="{{ path('product', {'id': product.id }) }}" class="underlined-text"><h3 class="card-text">{{ product.brand}} - {{ product.model }}</h3></a>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
-                                                <a role="button" class="btn btn-sm btn-outline-secondary" href="{{ url('product', {'productId': product.id }) }}">View</a>
+                                                <a role="button" class="btn btn-sm btn-outline-secondary" href="{{ path('product', {'id': product.id }) }}">Voir le produit</a>
                                             </div>
                                             <h5 class="text-muted">{{ product.price|number_format(2, '.', ',') }} €</h5>
                                         </div>

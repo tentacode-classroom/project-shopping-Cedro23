@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Balisong
 {
+    //<editor-fold desc="Variables">
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -37,7 +38,7 @@ class Balisong
     private $bladeLength;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=30)
      */
     private $bladeMaterial;
 
@@ -52,7 +53,7 @@ class Balisong
     private $lockingType;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=30)
      */
     private $handle;
 
@@ -67,7 +68,7 @@ class Balisong
     private $model;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=10)
      */
     private $ref;
 
@@ -76,6 +77,13 @@ class Balisong
      */
     private $imageUrl;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $viewCounter;
+    //</editor-fold>
+
+    //<editor-fold desc="Setters/Getters">
     public function getId(): ?int
     {
         return $this->id;
@@ -129,12 +137,12 @@ class Balisong
         return $this;
     }
 
-    public function getBladeMaterial(): ?int
+    public function getBladeMaterial(): ?string
     {
         return $this->bladeMaterial;
     }
 
-    public function setBladeMaterial(int $bladeMaterial): self
+    public function setBladeMaterial(string $bladeMaterial): self
     {
         $this->bladeMaterial = $bladeMaterial;
 
@@ -165,12 +173,12 @@ class Balisong
         return $this;
     }
 
-    public function getHandle(): ?int
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
 
-    public function setHandle(int $handle): self
+    public function setHandle(string $handle): self
     {
         $this->handle = $handle;
 
@@ -201,12 +209,12 @@ class Balisong
         return $this;
     }
 
-    public function getRef(): ?int
+    public function getRef(): ?string
     {
         return $this->ref;
     }
 
-    public function setRef(int $ref): self
+    public function setRef(string $ref): self
     {
         $this->ref = $ref;
 
@@ -223,5 +231,23 @@ class Balisong
         $this->imageUrl = $imageUrl;
 
         return $this;
+    }
+
+    public function getViewCounter(): ?int
+    {
+        return $this->viewCounter;
+    }
+
+    public function setViewCounter(int $viewCounter): self
+    {
+        $this->viewCounter = $viewCounter;
+
+        return $this;
+    }
+    //</editor-fold>
+
+    public function incrementViewCounter()
+    {
+        $this->viewCounter++;
     }
 }

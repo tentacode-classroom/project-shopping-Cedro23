@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4e13484-eff2-45ed-8adb-5a4def7f7b5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/balisong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/balisong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/843fce52-1089-47ed-9451-63a965271b97.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/843fce52-1089-47ed-9451-63a965271b97.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomePageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Balisong.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Balisong.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BalisongRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BalisongRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/detail.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,14 +123,32 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1245343293">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="38" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="38" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/HomePageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="104" selection-start-line="21" selection-start-column="104" selection-end-line="21" selection-end-column="104" />
+            <state relative-caret-position="252">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding>
                 <element signature="e#34#58#0#PHP" expanded="true" />
               </folding>
@@ -153,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="34" column="171" selection-start-line="34" selection-start-column="171" selection-end-line="34" selection-end-column="171" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -185,10 +191,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="756">
               <caret line="36" column="68" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#3098#3104#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -205,7 +207,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Balisong.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
+            <state relative-caret-position="3738">
               <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
               <folding>
                 <element signature="e#161#193#0#PHP" />
@@ -214,11 +216,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataFixtures/TestFixtures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="881">
-              <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+            <state relative-caret-position="832">
+              <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
               <folding>
                 <element signature="e#36#60#0#PHP" expanded="true" />
               </folding>
@@ -255,13 +257,13 @@
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Controller/AddProductController.php" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/templates/homepage.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Balisong.php" />
         <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/templates/product/detail.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/BalisongRepository.php" />
-        <option value="$PROJECT_DIR$/src/Controller/HomePageController.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/TestFixtures.php" />
+        <option value="$PROJECT_DIR$/templates/homepage.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/HomePageController.php" />
       </list>
     </option>
   </component>
@@ -495,11 +497,12 @@
       <workItem from="1537974685957" duration="3104000" />
       <workItem from="1538050066068" duration="14928000" />
       <workItem from="1538136180136" duration="13497000" />
+      <workItem from="1539000728776" duration="286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51563000" />
+    <option name="totallyTimeSpent" value="51849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -514,7 +517,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15351813" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15511727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.329718" />
@@ -674,16 +677,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/homepage.html.twig">
+    <entry file="das://843fce52-1089-47ed-9451-63a965271b97/schema/balisong-sell/table/balisong">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/product/detail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="34" column="171" selection-start-line="34" selection-start-column="171" selection-end-line="34" selection-end-column="171" />
+        <state relative-caret-position="756">
+          <caret line="36" column="68" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Balisong.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
+        <state relative-caret-position="3738">
           <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
           <folding>
             <element signature="e#161#193#0#PHP" />
@@ -691,10 +708,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://843fce52-1089-47ed-9451-63a965271b97/schema/balisong-sell/table/balisong">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/TestFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding>
+            <element signature="e#36#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/BalisongRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -708,47 +742,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/product/detail.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="68" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3098#3104#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/BalisongRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/HomePageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="104" selection-start-line="21" selection-start-column="104" selection-end-line="21" selection-end-column="104" />
+        <state relative-caret-position="252">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
             <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/TestFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
-          <folding>
-            <element signature="e#36#60#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

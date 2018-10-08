@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomePageController extends AbstractController
 {
     /**
-     * @Route("/{filterType}/{filterParam}", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function index($filterType = "", $filterParam = "")
     {
@@ -24,7 +24,6 @@ class HomePageController extends AbstractController
             case "search": $balisongs = $this->getDoctrine()->getRepository(Balisong::class)->searchByValue($filterParam);
                         break;
         }
-
 
 
 

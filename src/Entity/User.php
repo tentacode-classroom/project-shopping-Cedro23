@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -18,26 +19,39 @@ class User
 
     /**
      * @ORM\Column(type="string", length=100)
+     *
+     * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
+     * @Assert\Email( message = "The email '{{ value }}' is not a valid email.")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z0-9\w+\|]+$/",
+     *     match = false,
+     *     message="Votre mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial"
+     * )
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=30, nullable=true)
+     * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
+     *
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=50, nullable=true)
+     * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
      */
     private $lastname;
 

@@ -38,11 +38,6 @@ class Balisong
     private $bladeLength;
 
     /**
-     * @ORM\Column(type="string", length=30)
-     */
-    private $bladeMaterial;
-
-    /**
      * @ORM\Column(type="string", length=50)
      */
     private $bladeType;
@@ -52,10 +47,6 @@ class Balisong
      */
     private $lockingType;
 
-    /**
-     * @ORM\Column(type="string", length=30)
-     */
-    private $handle;
 
     /**
      * @ORM\Column(type="string", length=50)
@@ -81,6 +72,18 @@ class Balisong
      * @ORM\Column(type="integer")
      */
     private $viewCounter;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Material", inversedBy="balisongsBlade")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $bladeMaterial;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Material", inversedBy="balisongsHandle")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $handle;
     //</editor-fold>
 
     //<editor-fold desc="Setters/Getters">
@@ -137,18 +140,6 @@ class Balisong
         return $this;
     }
 
-    public function getBladeMaterial(): ?string
-    {
-        return $this->bladeMaterial;
-    }
-
-    public function setBladeMaterial(string $bladeMaterial): self
-    {
-        $this->bladeMaterial = $bladeMaterial;
-
-        return $this;
-    }
-
     public function getBladeType(): ?string
     {
         return $this->bladeType;
@@ -169,18 +160,6 @@ class Balisong
     public function setLockingType(string $lockingType): self
     {
         $this->lockingType = $lockingType;
-
-        return $this;
-    }
-
-    public function getHandle(): ?string
-    {
-        return $this->handle;
-    }
-
-    public function setHandle(string $handle): self
-    {
-        $this->handle = $handle;
 
         return $this;
     }
@@ -249,5 +228,29 @@ class Balisong
     public function incrementViewCounter()
     {
         $this->viewCounter++;
+    }
+
+    public function getBladeMaterial(): ?Material
+    {
+        return $this->bladeMaterial;
+    }
+
+    public function setBladeMaterial(?Material $bladeMaterial): self
+    {
+        $this->bladeMaterial = $bladeMaterial;
+
+        return $this;
+    }
+
+    public function getHandle(): ?Material
+    {
+        return $this->handle;
+    }
+
+    public function setHandle(?Material $handle): self
+    {
+        $this->handle = $handle;
+
+        return $this;
     }
 }

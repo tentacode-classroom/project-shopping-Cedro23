@@ -28,7 +28,7 @@
                                             <div class="btn-group">
                                                 <a role="button" class="btn btn-sm btn-outline-secondary" href="{{ path('product', {'id': product.id }) }}">Voir le produit</a>
                                             </div>
-                                            <h5 class="text-muted">{{ product.price|number_format(2, '.', ',') }} €</h5>
+                                            <h5 class="text-muted">{{ product.price|price(2, ',', '.') }}</h5>
                                         </div>
                                     </div>
                                 </div>

@@ -4,11 +4,15 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity("email", message = "Cette addresse mail est déjà utilisée")
+ * @UniqueEntity("username", message = "Ce pseudonyme est déjà utilisé")
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
@@ -18,7 +22,7 @@ class User
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, unique=true)
      *
      * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
      * @Assert\Email( message = "The email '{{ value }}' is not a valid email.")
@@ -26,13 +30,13 @@ class User
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=30)
+     * @ORM\Column(type="string", length=30, unique=true)
      * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
      */
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=30)
+     * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
      * @Assert\Regex(
      *     pattern="/^[a-zA-Z0-9\w+\|]+$/",
@@ -54,6 +58,11 @@ class User
      * @Assert\NotBlank( message = "Veuillez renseigner ce champ")
      */
     private $lastname;
+
+    /**
+     * @ORM\Column(type="simple_array")
+     */
+    private $roles = ['ROLE_USER'];
 
     public function getId(): ?int
     {
@@ -116,6 +125,52 @@ class User
     public function setLastname(?string $lastname): self
     {
         $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getSalt()
+    {
+        // you *may* need a real salt depending on your encoder
+        // see section on salt below
+        return null;
+    }
+
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    public function eraseCredentials()
+    {}
+
+    /** @see \Serializable::serialize() */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    /** @see \Serializable::unserialize() */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+            ) = unserialize($serialized, array('allowed_classes' => false));
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
 
         return $this;
     }

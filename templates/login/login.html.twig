@@ -5,22 +5,32 @@
 {% block body %}
 
 <div class="example-wrapper">
-    <h1>Login</h1>
+    <div style="width: 40%; margin-left: 30%">
+        <h1 style="margin-left: 25%; font-size: 80px;">Connexion</h1>
+        {% if error %}
+            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        <form  action="{{ path('login') }}" method="post">
+            <div class="form-group">
+                <input class="form-control form-control-lg" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Pseudonyme" />
+            </div>
 
-    <form action="{{ path('login') }}" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+            <div class="form-group">
+                <input class="form-control form-control-lg" type="password" id="password" name="_password" placeholder="Mot de passe" />
+            </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password" />
+            <button class="btn btn-primary" style="width: 100%;" type="submit">Se connecter</button>
 
-        {#
-            If you want to control the URL the user
-            is redirected to on success (more details below)
-            <input type="hidden" name="_target_path" value="/account" />
-        #}
 
-        <button type="submit">login</button>
-    </form>
+            {#
+                If you want to control the URL the user
+                is redirected to on success (more details below)
+                <input type="hidden" name="_target_path" value="/account" />
+            #}
+
+        </form>
+    </div>
+
+
 </div>
 {% endblock %}

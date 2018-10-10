@@ -14,8 +14,19 @@ class AppRuntime implements RuntimeExtensionInterface
     public function priceFilter($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
     {
         $price = number_format($number, $decimals, $decPoint, $thousandsSep);
-        $price = $price.'€';
 
         return $price;
+    }
+
+    public function randomNumber()
+    {
+        $randomNumber = mt_rand ( 0, 100 );
+        return $randomNumber;
+    }
+
+    public function eurToUsd($_EURPrice)
+    {
+        $USDPrice = $_EURPrice * 1.15;
+        return $USDPrice;
     }
 }

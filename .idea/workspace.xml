@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4e13484-eff2-45ed-8adb-5a4def7f7b5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/843fce52-1089-47ed-9451-63a965271b97.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/843fce52-1089-47ed-9451-63a965271b97.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Twig/AppExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twig/AppExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Twig/AppRuntime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twig/AppRuntime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +124,7 @@
     <session id="1245343293">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="2" />
@@ -143,7 +134,7 @@
         <counts>
           <entry key="dummy" value="17" />
           <entry key="php" value="1477" />
-          <entry key="twig" value="910" />
+          <entry key="twig" value="1008" />
           <entry key="yaml" value="228" />
         </counts>
       </usages-collector>
@@ -151,7 +142,7 @@
         <counts>
           <entry key="PHP" value="1477" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Twig" value="910" />
+          <entry key="Twig" value="1008" />
           <entry key="YAML" value="228" />
         </counts>
       </usages-collector>
@@ -210,8 +201,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+            <state relative-caret-position="580">
+              <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -548,12 +539,12 @@
       <workItem from="1538050066068" duration="14928000" />
       <workItem from="1538136180136" duration="13497000" />
       <workItem from="1539000728776" duration="22022000" />
-      <workItem from="1539159448682" duration="9382000" />
+      <workItem from="1539159448682" duration="10735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82967000" />
+    <option name="totallyTimeSpent" value="84320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -885,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+        <state relative-caret-position="580">
+          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
         </state>
       </provider>
     </entry>

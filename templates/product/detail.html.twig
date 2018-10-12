@@ -33,7 +33,10 @@
                     <li>Référence : {{ balisong.ref }}</li>
                 </ul>
 
-                <h3 class="my-3">Prix : {{ balisong.price|number_format(2, '.', ',') }} €</h3>
+                <h3 class="my-3">Prix : {{ balisong.price|price(2, ',', '.') }} €</h3>
+                <a href="{{ path('basket_add', {
+                    'productId': balisong.id
+                }) }}"><h3 class="btn btn-primary" >Ajouter au panier</h3></a>
                 <h3><small>Vues : {{ balisong.viewCounter }}</small></h3>
             </div>
 

@@ -1,3 +1,3 @@
 # Projet Shopping
 
-Projet de Cédric Lesueur.
+*Projet de Cédric Lesueur.*
